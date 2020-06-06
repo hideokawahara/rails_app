@@ -175,7 +175,19 @@ input, textarea, select, .uneditable-input {
 
 input {
   height: auto !important;
+  
 }
+
+.btn.btn-info {
+  width: 200px;
+  box-shadow: 6px 6px #668AD8;
+  margin-left: 50%;
+}
+
+.form-control {
+  box-shadow: 0 0 8px gray;
+}
+  
 
 #error_explanation {
   color: red;
