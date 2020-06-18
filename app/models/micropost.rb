@@ -13,7 +13,7 @@ class Micropost < ApplicationRecord
       all #全て表示。Micropost.は省略。
     end
   end
-
+  
   private
 
     # アップロードされた画像のサイズをバリデーションする
