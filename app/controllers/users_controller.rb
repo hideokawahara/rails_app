@@ -4,13 +4,23 @@ class UsersController < ApplicationController
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: :destroy
 
+  # def index
+  #   @users = User.paginate(page: params[:page])
+  # end
+
   def index
-    @users = User.paginate(page: params[:page])
+    @users = User.paginate(page: params[:page]).search(params[:search])
   end
+
+  # def show
+  #   @user = User.find(params[:id])
+  #   @microposts = @user.microposts.paginate(page: params[:page])
+  # end
 
   def show
     @user = User.find(params[:id])
-    @microposts = @user.microposts.paginate(page: params[:page])
+    # 検索拡張機能として.search(params[:search])を追加    
+    @microposts = @user.microposts.paginate(page: params[:page]).search(params[:search])
   end
 
   def new
