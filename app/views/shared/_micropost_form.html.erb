@@ -1,10 +1,10 @@
 <%= form_for(@micropost) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <div class="field">
-    <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+  <div class="field form-group py-4">
+    <%= f.text_area :content, class: "form-control", placeholder: "何か投稿しよう！" %>
   </div>
-  <%= f.submit "Post", class: "btn btn-primary" %>
-  <span class="picture">
+  <%= f.submit "Post", class: "btn btn-outline-success mb-4" %>
+  <span class="picture badge badge-pill badge-info">
     <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
   </span>
 <% end %>
