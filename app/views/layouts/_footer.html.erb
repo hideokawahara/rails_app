@@ -1,13 +1,17 @@
-<footer class="footer">
-  <small>
+<footer class="py-4 bg-dark text-light">
+  <div class="container text-center">
+    <!-- ナビゲーション -->
+    <ul class="nav justify-content-center mb-3">
+      <li><%= link_to "詳細",   about_path, class: 'nav-link' %></li>
+      <li><%= link_to "お問合わせ",   contact_path, class: 'nav-link' %></li>
+      <li><a href="http://news.railstutorial.org/" class="nav-link">お知らせ</a></li>
+    </ul>
+    <!-- /ナビゲーション -->
+    <p>
+      <small>
     The <a href="https://railstutorial.jp/">hinoizu</a>
     by <a href="http://www.michaelhartl.com/">Hideo KAWAHARA</a>
   </small>
-  <nav>
-    <ul>
-      <li><%= link_to "詳細",   about_path %></li>
-      <li><%= link_to "お問合わせ", contact_path %></li>
-      <li><a href="http://news.railstutorial.org/">お知らせ</a></li>
-    </ul>
-  </nav>
+    </p>
+  </div>
 </footer>
